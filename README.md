@@ -14,11 +14,21 @@ Additionally, the pipeline for this cuisine recognizer can be extended to other 
 - The data was downloaded from the web using a python package `bing_image_downloader` ([link](https://github.com/gurugaurav/bing_image_downloader))
 - Total of 10k images (~5000 Korean, ~5000 Indian) were split into training (80%) and test (20%) sets. 
 
-(Images here)  
+Examples of indian cuisine images and korean cuisine images are shown below [Fig 1]. As oppose to classifying two specific dishes that are visually very different, classifying cuisine is challenging due to the diversity of dishes in each cuisine.  
 
-Examples of indian cuisine images and korean cuisine images are shown below [Fig x]. As oppose to classifying two specific dishes that are visually very different, classifying cuisine is challenging due to the diversity of dishes in each cuisine.  
+<p align="center">
+  <img src="./images/sample_images.png" width=800>
+<br>
+<b>Figure 1.</b> Sample images of Indian and Korean food in the dataset
+</p>
 
 Figure below is showing average frequency of RGB pixels and luminosity (grayscale) values from all the images in the dataset, and there is no significant difference between the two cuisines. Also, similar shapes and textures exists in both cuisines, adding to the complexity of the cuisine recognition.
+<p align="center">
+  <img src="./images/colors_shapes.png" width=800>
+<br>
+<b>Figure 2.</b> Average frequency of R/G/B/G pixel values(left) and shapes and textures in Korean and Indian food iamges(right)
+</p>
+
 
 ## Modeling and Evaluation
 
@@ -45,11 +55,26 @@ Lastly, a convolutional neural network was used to further improve the model, an
 - **Loss Function:** Sparse Categorical Cross Entropy  
 - **Performance Metric:** Accuracy 
 
+<p align="center">
+  <img src="./images/cnn.png" >
+<br>
+<b>Figure 3.</b> Architecture of CNN model with 2 convolutional layers and confusion matrix from predictions on test dataset
+</p>
+
+
 ### Examples of incorrectly predicted images:  
 Some of the incorrectly predicted images were examined:  
+
+
+<p align="center">
+  <img src="./images/incorrectly_predicted.png" width=800 >
+<br>
+<b>Figure 4.</b> Examples of inccorrectly predicted images from CNN model and similar food images
+</p>
+
+
 1. Biryani (Indian) was predicted as Korean food - this could be because it looks similar to bibimbap (Korean), even to the human eye. Downsampling the images (from original resolution to 128 x 128 in preprocessing) may have resulted in the loss of finer details that could have improved performance.  
 2. A Korean food (Tteokbokki) was predicted as Indian food - it is a bit unclear what could have contributed to this misclassification.
-[Figure]
 
 
 ## Future directions:
