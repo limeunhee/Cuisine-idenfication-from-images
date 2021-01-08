@@ -83,7 +83,9 @@ In order to improve the prediction accuracy, we could:
 - Add more images (through web scraping or data augmentation)  
 - Increase the model complexity to better capture the non-linear decision boundary
 
-
+## Additionally, I'd like to:
+- Add additional cuisines and test performance
+- Use transfer learning and compare prediction accuracy
 
 
 
