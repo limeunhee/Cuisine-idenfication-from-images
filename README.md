@@ -32,7 +32,7 @@ Figure below is showing average frequency of RGB pixels and luminosity (grayscal
 
 ## Modeling and Evaluation
 
-#### Baseline Model
+### Baseline Model
 First, a baseline model is established by assigning labels to test data at random while keeping the probability of each class the same as that of the training set, which is approximately 50%/50% Indian and Korean.  
 
 Accuracy is chosen as the metric for model evaulation as we have well-balanced classes, and the importance of predicting one class properly is not any better or worse than predicting the other class properly.  
@@ -43,13 +43,13 @@ prediction = np.random.choice([0, 1], [0.5, 0.5])
 
 With the baseline model, test accuracy is about 50%, as expected with an evenly-balanced binary classification.
 
-#### Multilayer Perceptron  
+### Multilayer Perceptron  
 Next, a multilayer perceptron with architecture below gave 95.4% test accuracy.  
 - **Optimizer:** ADAM (learning rate = 0.0001)  
 - **Loss Function:** Sparse Categorical Cross Entropy  
 - **Performance Metric:** Accuracy   
 
-#### Convolutional Neural Network 
+### Convolutional Neural Network 
 Lastly, a convolutional neural network was used to further improve the model, and 96.8% accuracy was achieved. [Figure ]  Dropout layers were added to reduce overfitting.  
 - **Optimizer:** ADAM (learning rate = 0.0001)  
 - **Loss Function:** Sparse Categorical Cross Entropy  
@@ -62,7 +62,7 @@ Lastly, a convolutional neural network was used to further improve the model, an
 </p>
 
 
-#### Examples of incorrectly predicted images:  
+### Examples of incorrectly predicted images:  
 Some of the incorrectly predicted images were examined:  
 
 
