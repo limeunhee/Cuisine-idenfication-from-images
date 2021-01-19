@@ -50,7 +50,7 @@ Next, a multilayer perceptron with architecture below gave 95.4% test accuracy.
 - **Performance Metric:** Accuracy   
 
 ### Convolutional Neural Network 
-Lastly, a convolutional neural network was used to further improve the model, and 96.8% accuracy was achieved. [Figure 3]  Dropout layers were added to reduce overfitting.  
+Lastly, a convolutional neural network was used to further improve the model, and 97.3% accuracy was achieved. [Figure 3]  Dropout layers were added to reduce overfitting.  
 - **Optimizer:** ADAM (learning rate = 0.0001)  
 - **Loss Function:** Sparse Categorical Cross Entropy  
 - **Performance Metric:** Accuracy 
