@@ -5,7 +5,8 @@ Food identification from images is of great interest to the machine learning com
 
 Cuisine identification can be helpful for:  
 1. A user who sees a photo of a dish and wants to identify which cuisine it is  
-2. Building auto tag generation for search engines or restaurant review apps for their data analysis.  
+2. Building auto tag generation for search engines or restaurant review apps for their data analysis or targeted advertisement. 
+    (i.e if a user likes multiple photos that are identified as Korean cuisine, provide nearby Korean restaurants ads) 
 
 Additionally, the pipeline for this cuisine recognizer can be extended to other object identifications. 
 
@@ -77,15 +78,14 @@ Some of the incorrectly predicted images were examined:
 2. A Korean food (Tteokbokki) was predicted as Indian food - it is a bit unclear what could have contributed to this misclassification.
 
 
-## Future directions:
-In order to improve the prediction accuracy, we could:  
-- Use the incorrectly predicted images to further train our model  
+## Summary and future directions:
+In summary, a baseline, NN, and CNN models were built for cuisine identification with food images of Korean and Indian food. The highest test accuracy was achieved with CNN model (97.3% compared to ~50% om baseline model). 
+
+In order to improve the prediction accuracy, I'd like to try: 
+- Feed incorrectly predicted images to trainset to further train our model  
 - Add more images (through web scraping or data augmentation)  
 - Increase the model complexity to better capture the non-linear decision boundary
 
 Additionally, I'd like to:
 - Use transfer learning and compare prediction accuracy
 - Add additional cuisines and test performance
-
-
-
