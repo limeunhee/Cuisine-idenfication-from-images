@@ -79,7 +79,7 @@ Some of the incorrectly predicted images were examined:
 
 
 ## Summary and future directions:
-In summary, a baseline, NN, and CNN models were built for cuisine identification with food images of Korean and Indian food. The highest test accuracy was achieved with CNN model (97.3% compared to ~50% om baseline model). 
+In summary, a baseline, NN, and CNN models were built for cuisine identification with food images of Korean and Indian food. The highest test accuracy was achieved with CNN model (97.3% compared to ~50% in baseline model). 
 
 In order to improve the prediction accuracy, I'd like to try: 
 - Feed incorrectly predicted images to trainset to further train our model  
